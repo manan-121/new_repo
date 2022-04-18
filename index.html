@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Crud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h3>Java Script CRUD</h3>
+    <hr>
+    <form name="myForm">
+        <div class="person-form" id="data">
+
+
+            <div>
+                <label>First Name:</label>
+                <input type="text" name="fname" id="fname" class="c1"><br><br>
+            </div>
+            <div>
+                <label>Middel Name:</label>
+                <input type="text" name="mname" id="mname" class="c1"><br><br>
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" name="lname" id="lname" class="c1"><br><br>
+            </div>
+
+            <div>
+                <label>Date of Birth:</label>
+                <input type="date" name="date" id="dob" class="c1"><br><br>
+            </div>
+            <div name=gen>
+                <label>Gender:</label>
+
+
+                <input type="radio" name="gender" value="Male" id="male">Male
+                <input type="radio" name="gender" value="Female" id="female">Female <br><br>
+
+            </div>
+            <div>
+                <label for="country">Country :</label>
+                <select id="country" onchange="State(event)" class="l1">
+        <option selected="selected" value="">Select Your Country</option>
+    </select><br><br>
+            </div>
+            <div>
+                <label for="state">State: </label>
+                <select id="state" onchange="City(event)" class="l1">
+        <option  selected="selected" value="">Select Your State</option>
+    </select><br><br>
+            </div>
+            <div>
+                <label for="city">City: </label>
+                <select id="city" class="l1">
+        <option  selected="selected" value="">Select Your City</option>
+    </select><br><br>
+            </div>
+
+            <div>
+                <label>Married:</label>
+                <input type="checkbox" name="married" id="check"><br><br>
+            </div>
+
+
+        </div>
+    </form>
+    <div>
+        <button id="btn" onclick=" ReadFormData();">Submit</button>
+        <!-- <input type="submit" id="btn" onclick=" onFormSubmit();"> -->
+        <button id="btn2" onclick="updateRecord();">Update</button>
+    </div>
+    <hr>
+    <div class="person-table">
+        <table class="list" id="personList">
+            <thead>
+                <tr>
+                    <th id="inc">Sr No.</th>
+
+                    <th>First Name</th>
+                    <th>Middel Name</th>
+                    <th>Last Name</th>
+                    <th>Date Of Birth</th>
+                    <th>gender</th>
+                    <th>Country</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Married Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div id="movies-list"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
